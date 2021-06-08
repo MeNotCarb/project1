@@ -1,0 +1,736 @@
+/* font-family: Baloo Paaji 2;
+   font-family: Asap Condensed; */
+/* reset -----------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Baloo Paaji 2', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+.wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  /* background-color: #C7CBCA; */
+}
+
+/* nawigacja -------------------------------------*/
+
+nav.navbar {
+  /* max-width: 1440px; */
+  /* margin: 20px auto; */
+  position: relative;
+  padding: 20px 0;
+  text-align: left;
+  background-color: #85C9E9;
+}
+
+.navbar .logos {
+  position: absolute;
+  width: 5%;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+nav.navbar a,
+nav.navbar p {
+  display: inline-block;
+  /* position: relative; */
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  padding: 10px;
+  margin: 0 20px;
+  /* transition: 2s; */
+}
+
+nav.navbar p i {
+  transform: translateY(-1px);
+}
+
+nav.navbar a:hover,
+nav.navbar p:hover {
+  border-bottom: 2px solid #111;
+  color: black;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+div.socials a i.fab:hover {
+  color: #4F68FF;
+}
+
+.dropdown:hover .drpcontent {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.drpcontent {
+  display: none;
+  position: absolute;
+  /* background-color: rgba(20, 100, 100, 0.9); */
+  background-color: rgba(87, 183, 221, 0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.drp-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+
+.navbar .dropdown .drpcontent a:hover,
+div.dropdown p.dropbtn {
+  border: none;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  nav.navbar {
+    padding: 10px 0;
+  }
+
+  nav.navbar a,
+  nav.navbar p {
+    font-size: 1.4rem;
+  }
+
+  .navbar .logos {
+    height: auto;
+    width: 70px;
+  }
+}
+
+/* header---------------------------------------- */
+
+header {
+  position: relative;
+  max-width: 1920px;
+  height: 80vh;
+  background-image: url('../img/main_bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(87, 183, 221, 0.1);
+}
+
+header h1 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: white;
+  text-align: center;
+  line-height: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Baloo Paaji 2', sans-serif;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 8px #000;
+}
+
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Sekcja description ------------------- */
+
+section.desc {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  /* margin-top: 10vh; */
+  /* margin-bottom: 15vh; */
+  position: relative;
+  background-color: #85C9E9;
+}
+
+section.desc div.txt div:before,
+section.desc div.txt p:after {
+  height: 20px;
+  width: 50px;
+  position: absolute;
+  content: '';
+}
+
+section.desc div.txt div.nd:before {
+  right: 0;
+  bottom: 0;
+  border-right: 2px solid #504B4A;
+  border-bottom: 2px solid #504B4A;
+}
+
+section.desc div.txt p.st:after {
+  left: 0;
+  top: 0;
+  border-left: 2px solid #504B4A;
+  border-top: 2px solid #504B4A;
+}
+
+section.desc div.txt {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.desc div.txt p {
+  position: relative;
+  flex: 1;
+  flex-basis: 49%;
+  font-family: 'Baloo Paaji 2', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 20px 20px;
+  line-height: 140%;
+  transform: translateY(5vh);
+  opacity: 0.0;
+  transition: 1s;
+}
+
+section.desc div.txt div.descli {
+  position: relative;
+  flex: 1;
+  flex-basis: 49%;
+  font-family: 'Baloo Paaji 2', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 20px 20px;
+  line-height: 170%;
+  transform: translateY(5vh);
+  opacity: 0.0;
+  transition: 1s;
+}
+
+section.desc div.txt h3 {
+  padding-bottom: 10px;
+}
+
+section.desc div.txt ul {
+  list-style: symbols();
+}
+
+section.desc div.txt p.active,
+section.desc div.txt div.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+section.desc div.txt p.st {
+  text-indent: 2vh;
+}
+
+section.desc div.txt p.st .txtindent {
+  display: inline-block;
+  text-indent: 2vh;
+}
+
+@media (max-width: 1024px) {
+  section.desc div.txt {
+    max-width: 800px;
+  }
+
+  section.desc div.txt p {
+    font-size: 14px;
+  }
+
+  section.desc div.txt div.descli {
+    font-size: 14px;
+  }
+}
+
+/* Sekcja content ------------------- */
+
+section.content {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.offer {
+  padding-top: 10vh;
+  font-size: 38px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content .offer {
+  border-bottom: 2px solid #504B4A;
+  width: 20vw;
+  margin: 0 auto;
+}
+
+section.content div.right,
+section.content div.left {
+  display: flex;
+  align-content: space-around;
+  margin: 5vw auto;
+  transition: 1s;
+}
+
+section.content div.right {
+  margin-bottom: 20vh;
+}
+
+div.right {
+  transform: translateX(7vw);
+  opacity: 0;
+}
+
+div.left {
+  transform: translateX(-7vw);
+  opacity: 0;
+}
+
+div.left.active,
+div.right.active {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+div.right i {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 12vw;
+  color: #222222;
+  flex: 1 1;
+  align-self: center;
+}
+
+div.left i {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12vw;
+  color: #222222;
+  flex: 1 1;
+  align-self: center;
+  order: 2;
+}
+
+div.right p,
+div.left p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 180%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+div.coltxt {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.right h2,
+div.left h2 {
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #504B4A;
+}
+
+div.left h2 {
+  margin-right: 20px;
+}
+
+div.left p {
+  order: 1;
+}
+
+div.left img {
+  order: 2;
+}
+
+@media (max-width: 1280px) {
+  section.content {
+    max-width: 800px;
+  }
+
+  div.right p,
+  div.left p {
+    font-size: 16px;
+  }
+
+  div.right h2,
+  div.left h2 {
+    font-size: 22px;
+  }
+}
+
+/* Sekcja footer ------------------------------------------------------------ */
+
+footer div.foot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 30vh;
+  width: 100%;
+  background-color: #222;
+  color: #666666;
+}
+
+footer div {
+  flex-basis: 15%;
+}
+
+footer div.copyrights span {
+  color: #eee;
+}
+
+footer div.contact h2 {
+  padding-bottom: 10px;
+  color: #eee;
+  font-family: 'Baloo Paaji 2', sans-serif;
+}
+
+footer div.contact p {
+  padding: 10px 0;
+  font-family: 'Baloo Paaji 2', sans-serif;
+  font-size: 12px;
+  /* letter-spacing: 1px; */
+}
+
+div.contact .fas {
+  font-size: 16px;
+  line-height: 22px;
+  margin-right: 15px;
+}
+
+div.socmen i.fab {
+  color: #4F68FF;
+  font-size: 24px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+  padding: 10px;
+}
+
+div.socmen i.fab:hover {
+  color: whitesmoke;
+}
+
+@media (max-width: 1280px) {
+  footer div.foot {
+    height: 24vh;
+  }
+
+  footer div.contact h2 {
+    padding-bottom: 0;
+  }
+
+  footer div.contact p {
+    padding: 2px 0;
+  }
+}
+
+/* --------------------------------------------------> SUBPAGE CONTACT */
+
+.wrapcontact {
+  background-color: #C7CBCA;
+}
+
+.contactform .container .row h1 {
+  font-family: 'Baloo Paaji 2', sans-serif, 'arial';
+  font-size: 72px;
+  color: #555;
+  text-align: center;
+  padding-top: 85px;
+}
+
+@media (max-width: 1024px) {
+  .contactform .container .row h1 {
+    font-size: 52px;
+  }
+}
+
+
+/* ///// inputs /////*/
+
+input:focus~label,
+textarea:focus~label,
+input:valid~label,
+textarea:valid~label {
+  font-size: 0.75em;
+  color: #999;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+
+.styled-input label {
+  color: #999;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus~span,
+textarea:focus~span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  /* float: right; */
+  padding: 7px 35px;
+  margin-bottom: 10vh;
+  border-radius: 60px;
+  display: inline-block;
+  background-color: #4F68FF;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06),
+    0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.10),
+    0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+input[type=checkbox]+label {
+  color: #ccc;
+  font-style: 'Asap Condensed';
+}
+
+input[type=checkbox]:checked+label {
+  color: #f00;
+  font-style: normal;
+}
+
+/* --------------------------------------------------> SUBPAGE ABOUT */
+
+/* sekcja abo ------------------------------------------------ */
+
+section.abo div.abodesc {
+  padding: 10vh;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+section.abo div.abodesc h2 {
+  position: relative;
+  font-family: 'Baloo Paaji 2', sans-serif;
+  padding-bottom: 5vh;
+  text-indent: -8vh;
+  font-size: 42px;
+  letter-spacing: 1px;
+  line-height: 140%;
+  transform: translateX(-5vh);
+  opacity: 0.0;
+  transition: 1s;
+}
+
+section.abo div.abodesc p {
+  position: relative;
+  font-family: 'Baloo Paaji 2', sans-serif;
+  text-indent: 2vh;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 140%;
+  transform: translateX(5vh);
+  opacity: 0.0;
+  transition: 1s;
+}
+
+section.abo div.abodesc h2.active {
+  transform: translateX(0vh);
+  opacity: 1.0;
+}
+
+section.abo div.abodesc p.active {
+  transform: translateX(0vh);
+  opacity: 1.0;
+}
+
+section.traits h1.offer {
+  padding-top: 0;
+}
+
+@media (max-width: 1024px) {
+  section.abo div.abodesc {
+    max-width: 800px;
+  }
+
+  section.abo div.abodesc h2 {
+    font-size: 36px;
+  }
+
+  section.abo div.abodesc p {
+    font-size: 14px;
+  }
+}
+
+/* Sekcja traits ------------------- */
+
+.offer {
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 38px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.traits .offer {
+  border-bottom: 2px solid #504B4A;
+  width: 40vh;
+  margin: 0 auto;
+}
+
+.traitsbar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+  font-size: 28px;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+}
+
+.traitico {
+  display: flex;
+  align-self: center;
+  font-size: 50px;
+  color: #504B4A;
+}
+
+.trait1,
+.trait2,
+.trait3 {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(5vh);
+  opacity: 0.0;
+  transition: 1s;
+}
+
+.trait1,
+.trait3 {
+  padding-top: 8vh;
+}
+
+.trait1.active,
+.trait2.active,
+.trait3.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.trait1 p,
+.trait2 p,
+.trait3 p {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .traitsbar {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .offer {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .offer {
+    font-size: 30px;
+  }
+}
